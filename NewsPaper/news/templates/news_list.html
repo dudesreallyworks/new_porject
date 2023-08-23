@@ -1,0 +1,10 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<h1>Новости</h1>
+{% for news in news_list %}
+    <h2>{{ news.title }}</h2>
+    <p>{{ news.created_at}}</p>
+    <p>{{ news.text|truncatechars:20 }}</p>
+{% endfor %}
+{% endblock %}
